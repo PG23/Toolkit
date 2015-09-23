@@ -1,37 +1,37 @@
 h1 {
   border-bottom-style: solid;
   border-bottom-color: #EAEAE7;
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
 }
 
-#geolocation, #acceleration {
+#geolocation, #acceleration, #light {
   border-left-style: solid;
   border-left-color: #FF4E00;
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
 }
 
-#orientation, #miscellaneous {
+#orientation, #proximity {
   border-left-style: solid;
   border-left-color: #00AACC;
-  padding-left: 0.5em;
+  padding-left: 0.5rem;
 }
 
 #dispOrientation {
   position: relative;
-  width: 90vmin;
-  min-width: 10rem;
-  max-width: 30rem;
-  height: 90vmin;
-  min-height: 10rem;
-  max-height: 30rem;
+  width: calc(90vmin - 0.5rem);
+  min-width: calc(10rem);
+  max-width: calc(30rem);
+  height: calc(90vmin - 0.5rem);
+  min-height: calc(10rem);
+  max-height: calc(30rem);
 }
 
 #faceAlpha {
   position: absolute;
   left: 0%;
   top: 0%;
-  width: 70%;
-  height: 70%;
+  width: 86.66%;
+  height: 86.66%;
   background: #EAEAE7;
   border-style: solid;
   border-color: #2C393B;
@@ -60,9 +60,9 @@ h1 {
 
 #faceBeta {
   position: absolute;
-  left: 80%;
-  width: 10%;
-  height: 70%;
+  left: 90%;
+  width: 6.66%;
+  height: 86.66%;
   background: #EAEAE7;
   border-style: solid;
   border-color: #2C393B;
@@ -88,9 +88,9 @@ h1 {
 
 #faceGamma {
   position: absolute;
-  top: 80%;
-  width: 70%;
-  height: 10%;
+  top: 90%;
+  width: 86.66%;
+  height: 6.66%;
   background: #EAEAE7;
   border-style: solid;
   border-color: #2C393B;
@@ -116,12 +116,12 @@ h1 {
 
 #dispAcceleration {
   position: relative;
-  width: 90vmin;
-  min-width: 10rem;
-  max-width: 30rem;
-  height: 20vmin;
-  min-height: 3.33rem;
-  max-height: 10rem;
+  width: calc(90vmin - 0.5rem);
+  min-width: calc(10rem);
+  max-width: calc(30rem);
+  height: calc(3 * (90vmin - 0.5rem) / 10);
+  min-height: calc(3 * 10rem / 10);
+  max-height: calc(3 * 30rem / 10);
 }
 
 #faceXAcc {
@@ -129,7 +129,7 @@ h1 {
   left: 0%;
   top: 0%;
   width: 100%;
-  height: 20%;
+  height: 22.22%;
   background: #EAEAE7;
   border-style: solid;
   border-color: #2C393B;
@@ -139,17 +139,18 @@ h1 {
   position: absolute;
   left: 50%;
   top: 0%;
-  width: 0%;
+  right: 50%;
+  min-width: 1px;
   height: 100%;
-  background: #FF4E00;
+  background: #00AACC;
 }
 
 #faceYAcc {
   position: absolute;
   left: 0%;
-  top: 30%;
+  top: 33.33%;
   width: 100%;
-  height: 20%;
+  height: 22.22%;
   background: #EAEAE7;
   border-style: solid;
   border-color: #2C393B;
@@ -159,17 +160,18 @@ h1 {
   position: absolute;
   left: 50%;
   top: 0%;
-  width: 0%;
+  right: 50%;
+  min-width: 1px;
   height: 100%;
-  background: #FF4E00;
+  background: #00AACC;
 }
 
 #faceZAcc {
   position: absolute;
   left: 0%;
-  top: 60%;
+  top: 66.66%;
   width: 100%;
-  height: 20%;
+  height: 22.22%;
   background: #EAEAE7;
   border-style: solid;
   border-color: #2C393B;
@@ -179,7 +181,69 @@ h1 {
   position: absolute;
   left: 50%;
   top: 0%;
-  width: 0%;
+  right: 50%;
+  min-width: 1px;
+  height: 100%;
+  background: #00AACC;
+}
+
+#dispXProximity {
+  position: relative;
+  width: calc(90vmin - 0.5rem);
+  min-width: calc(10rem);
+  max-width: calc(30rem);
+  height: calc(1 * (90vmin - 0.5rem) / 10);
+  min-height: calc(1 * 10rem / 10);
+  max-height: calc(1 * 30rem / 10);
+}
+
+#faceXProximity {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 66.66%;
+  background: #EAEAE7;
+  border-style: solid;
+  border-color: #2C393B;
+}
+
+#needleXProximity {
+  position: absolute;
+  left: 48%;
+  top: 0%;
+  width: 4%;
   height: 100%;
   background: #FF4E00;
+}
+
+#dispXLight {
+  position: relative;
+  width: calc(90vmin - 0.5rem);
+  min-width: calc(10rem);
+  max-width: calc(30rem);
+  height: calc(1 * (90vmin - 0.5rem) / 10);
+  min-height: calc(1 * 10rem / 10);
+  max-height: calc(1 * 30rem / 10);
+}
+
+#faceXLight {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 66.66%;
+  background: #EAEAE7;
+  border-style: solid;
+  border-color: #2C393B;
+}
+
+#needleXLight {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 0%;
+  min-width: 1px;
+  height: 100%;
+  background: #00AACC;
 }

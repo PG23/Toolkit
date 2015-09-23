@@ -50,20 +50,32 @@ window.addEventListener("DOMContentLoaded", function() {
     xAccEl.innerHTML = Math.round(10*xAcc)/10 + "m/s²";
     yAccEl.innerHTML = Math.round(10*yAcc)/10 + "m/s²";
     zAccEl.innerHTML = Math.round(10*zAcc)/10 + "m/s²";
-    needleXAccEl.style.left = Math.min(0, 50+50*MathMath.max(-2, xAcc/9.81));
-    needleXAccEl.style.width = 
+    needleXAccEl.style.left = Math.max(0, 50+25*(Math.min(0, xAcc)/9.81)) + "%";
+    needleXAccEl.style.right = Math.max(0, 50-25*(Math.max(0, xAcc)/9.81)) + "%";
+    needleYAccEl.style.left = Math.max(0, 50+25*(Math.min(0, yAcc)/9.81)) + "%";
+    needleYAccEl.style.right = Math.max(0, 50-25*(Math.max(0, yAcc)/9.81)) + "%";
+    needleZAccEl.style.left = Math.max(0, 50+25*(Math.min(0, zAcc)/9.81)) + "%";
+    needleZAccEl.style.right = Math.max(0, 50-25*(Math.max(0, zAcc)/9.81)) + "%";
   })
   
   // Proximity
-  var proximityEl = document.querySelector("#proximity");
+  var xProximityEl = document.querySelector("#xProximity");
+  var needleXProximityEl = document.querySelector("#needleXProximity");
   window.addEventListener("deviceproximity", function (event) {
-    proximityEl.innerHTML = Math.round(event.value) + "cm";
+    var xProximity = event.value;
+    var minXProximity = Math.min(event.min, event.value);
+    var maxXProximity = Math.max(event.max, event.value);
+    xProximityEl.innerHTML = Math.round(xProximity) + "cm";
+    needleXProximityEl.style.left = -2+100*(xProximity-minXProximity)/(maxXProximity-minXProximity) + "%";
   })
   
   // Ambient light intensity
-  var lightEl = document.querySelector("#light");
+  var xLightEl = document.querySelector("#xLight");
+  var needleXLightEl = document.querySelector("#needleXLight");
   window.addEventListener("devicelight", function (event) {
-    lightEl.innerHTML = Math.round(event.value) + "lux";
+    var xLight = event.value;
+    xLightEl.innerHTML = Math.round(xLight) + "lux";
+    needleXLightEl.style.width = 100*(1-Math.exp(-xLight/100)) + "%";
   })
     
 });

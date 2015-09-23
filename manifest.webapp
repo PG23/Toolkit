@@ -1,7 +1,7 @@
 {
   "version": "0.2.0",
   "name": "Toolkit",
-  "description": "A basic toolkit displaying data from locally detected sensors",
+  "description": "A simple, open-source Toolkit app that displays data from available sensors",
   "launch_path": "/index.html",
   "icons": {
     "16": "/img/icons/icon16x16.png",
@@ -10,11 +10,13 @@
     "128": "/img/icons/icon128x128.png"
   },
   "developer": {
-    "name": "pg23"
+    "name": "pg23",
+    "url": "https://github.com/PG23/Toolkit"
   },
   "type": "privileged",
   "permissions": {
     "geolocation": {
+      "description": "Access to geolocation is required to display coordinates"
     }
   },
   "default_locale": "en",
