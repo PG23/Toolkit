@@ -1,0 +1,185 @@
+h1 {
+  border-bottom-style: solid;
+  border-bottom-color: #EAEAE7;
+  padding-left: 0.5em;
+}
+
+#geolocation, #acceleration {
+  border-left-style: solid;
+  border-left-color: #FF4E00;
+  padding-left: 0.5em;
+}
+
+#orientation, #miscellaneous {
+  border-left-style: solid;
+  border-left-color: #00AACC;
+  padding-left: 0.5em;
+}
+
+#dispOrientation {
+  position: relative;
+  width: 90vmin;
+  min-width: 10rem;
+  max-width: 30rem;
+  height: 90vmin;
+  min-height: 10rem;
+  max-height: 30rem;
+}
+
+#faceAlpha {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 70%;
+  height: 70%;
+  background: #EAEAE7;
+  border-style: solid;
+  border-color: #2C393B;
+  border-radius: 50%;
+}
+
+#needleAlpha {
+  position: absolute;
+  left: 48%;
+  top: 10%;
+  width: 4%;
+  height: 60%;
+  background: linear-gradient(0deg, #00AACC, #FF4E00, #FF4E00);
+  transform-origin: 50% 66.667%;
+  transform: rotate(0deg);
+}
+
+#needleAlpha0 {
+  position: absolute;
+  left: 49.5%;
+  top: 0%;
+  width: 1%;
+  height: 50%;
+  background: #2C393B;
+}
+
+#faceBeta {
+  position: absolute;
+  left: 80%;
+  width: 10%;
+  height: 70%;
+  background: #EAEAE7;
+  border-style: solid;
+  border-color: #2C393B;
+}
+
+#needleBeta {
+  position: absolute;
+  left: 0%;
+  top: 48%;
+  width: 100%;
+  height: 4%;
+  background: #FF4E00;
+}
+
+#needleBeta0 {
+  position: absolute;
+  left: 0%;
+  top: 49.5%;
+  width: 100%;
+  height: 1%;
+  background: #2C393B;
+}
+
+#faceGamma {
+  position: absolute;
+  top: 80%;
+  width: 70%;
+  height: 10%;
+  background: #EAEAE7;
+  border-style: solid;
+  border-color: #2C393B;
+}
+
+#needleGamma {
+  position: absolute;
+  left: 48%;
+  top: 0%;
+  width: 4%;
+  height: 100%;
+  background: #FF4E00;
+}
+
+#needleGamma0 {
+  position: absolute;
+  left: 49.5%;
+  top: 0%;
+  width: 1%;
+  height: 100%;
+  background: #2C393B;
+}
+
+#dispAcceleration {
+  position: relative;
+  width: 90vmin;
+  min-width: 10rem;
+  max-width: 30rem;
+  height: 20vmin;
+  min-height: 3.33rem;
+  max-height: 10rem;
+}
+
+#faceXAcc {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 20%;
+  background: #EAEAE7;
+  border-style: solid;
+  border-color: #2C393B;
+}
+
+#needleXAcc {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  width: 0%;
+  height: 100%;
+  background: #FF4E00;
+}
+
+#faceYAcc {
+  position: absolute;
+  left: 0%;
+  top: 30%;
+  width: 100%;
+  height: 20%;
+  background: #EAEAE7;
+  border-style: solid;
+  border-color: #2C393B;
+}
+
+#needleYAcc {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  width: 0%;
+  height: 100%;
+  background: #FF4E00;
+}
+
+#faceZAcc {
+  position: absolute;
+  left: 0%;
+  top: 60%;
+  width: 100%;
+  height: 20%;
+  background: #EAEAE7;
+  border-style: solid;
+  border-color: #2C393B;
+}
+
+#needleZAcc {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  width: 0%;
+  height: 100%;
+  background: #FF4E00;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Toolkit</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/app.css">
+        <script type="text/javascript" src="js/app.js" defer></script>
+    </head>
+    <body>
+        <h1>Toolkit</h1>
+        <div id = "geolocation">
+            <h2>Geolocation Data</h2>
+            <p>
+                Local time: <span id="time">---</span><br/>
+                Altitude: <span id="altitude">---</span><br/>
+                Latitude: <span id="latitude">---</span><br/>
+                Longitude: <span id="longitude">---</span><br/>
+                Estimated speed: <span id="speed">---</span><br/>
+                Estimated heading: <span id="heading">---</span><br/>
+            </p>
+        </div>
+        <div id = "orientation">
+            <h2>Orientation Data</h2>
+            <p>
+                Alpha (heading): <span id="alpha">---</span><br/>
+                Beta (˄˅): <span id="beta">---</span><br/>
+                Gamma (˂˃): <span id="gamma">---</span><br/>
+            </p>
+            <div id = "dispOrientation">
+                <div id = "faceAlpha">
+                    <div id = "needleAlpha"></div>
+                    <div id = "needleAlpha0"></div>
+                </div>
+                <div id = "faceBeta">
+                    <div id = "needleBeta"></div>
+                    <div id = "needleBeta0"></div>
+                </div>
+                <div id = "faceGamma">
+                    <div id = "needleGamma"></div>
+                    <div id = "needleGamma0"></div>
+                </div>
+            </div>
+        </div>
+        <div id = "acceleration">
+            <h2>Acceleration Data</h2>
+            <p>
+                X acceleration: <span id="xAcc">---</span><br/>
+                Y acceleration: <span id="yAcc">---</span><br/>
+                Z acceleration: <span id="zAcc">---</span><br/>
+            </p>
+            <div id = "dispAcceleration">
+                <div id = "faceXAcc">
+                    <div id = "needleXAcc"></div>
+                </div>
+                <div id = "faceYAcc">
+                    <div id = "needleYAcc"></div>
+                </div>
+                <div id = "faceZAcc">
+                    <div id = "needleZAcc"></div>
+                </div>
+            </div>
+        </div>
+        <div id = "miscellaneous">
+            <h2>Miscellaneous Data</h2>
+            <p>
+                Proximity: <span id="proximity">---</span><br/>
+                Ambient light intensity: <span id="light">---</span><br/>
+            </p>
+        </div>
+    </body>
+</html>
