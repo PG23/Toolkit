@@ -85,5 +85,28 @@ window.addEventListener("DOMContentLoaded", function() {
     xLightEl.innerHTML = Math.round(xLight) + "lux";
     needleXLightEl.style.width = 100*(1-Math.exp(-xLight/100)) + "%";
   });
-    
+  
+  // Battery
+  var lBattEl = document.querySelector("#lBatt");
+  var cBattEl = document.querySelector("#cBatt");
+  var ctBattEl = document.querySelector("#ctBatt");
+  var dtBattEl = document.querySelector("#dtBatt");
+  var battery = navigator.battery;
+  lBattEl.innerHTML = battery.level * 100 + "%";
+  cBattEl.innerHTML = battery.charging ? "Yes" : "No";
+  ctBattEl.innerHTML = battery.chargingTime + " s";
+  dtBattEl.innerHTML = battery.dischargingTime + " s";
+  battery.addEventListener('levelchange', function() {
+    lBattEl.innerHTML = battery.level * 100 + "%";
+  });
+  battery.addEventListener('chargingchange', function() {
+    cBattEl.innerHTML = battery.charging ? "Yes" : "No";
+  });
+  battery.addEventListener('chargingtimechange', function() {
+    ctBattEl.innerHTML = battery.chargingTime + " s";
+  });
+  battery.addEventListener('dischargingtimechange', function() {
+    dtBattEl.innerHTML = battery.dischargingTime + " s";
+  });
+  
 });

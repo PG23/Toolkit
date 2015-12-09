@@ -10,7 +10,7 @@ h1 {
   padding-left: 0.5rem;
 }
 
-#orientation, #proximity {
+#orientation, #proximity, #battery {
   border-left-style: solid;
   border-left-color: #00AACC;
   padding-left: 0.5rem;
