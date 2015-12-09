@@ -9,7 +9,7 @@
     </head>
     <body>
         <h1>Toolkit</h1>
-        <div id = "geolocation">
+        <div id="geolocation">
             <h2>Geolocation</h2>
             <p>
                 Local time: <span id="time">---</span><br/>
@@ -20,12 +20,13 @@
                 Estimated heading: <span id="heading">---</span><br/>
             </p>
         </div>
-        <div id = "orientation">
+        <div id="orientation">
             <h2>Orientation</h2>
             <p>
                 Alpha (heading): <span id="alpha">---</span><br/>
                 Beta (˄˅): <span id="beta">---</span><br/>
                 Gamma (˂˃): <span id="gamma">---</span><br/>
+                Screen orientation: <span id="screen">---</span><br/>
             </p>
             <div id = "dispOrientation">
                 <div id = "faceAlpha">
@@ -42,46 +43,55 @@
                 </div>
             </div>
         </div>
-        <div id = "acceleration">
+        <div id="acceleration">
             <h2>Acceleration</h2>
             <p>
                 X acceleration: <span id="xAcc">---</span><br/>
                 Y acceleration: <span id="yAcc">---</span><br/>
                 Z acceleration: <span id="zAcc">---</span><br/>
             </p>
-            <div id = "dispAcceleration">
-                <div id = "faceXAcc">
-                    <div id = "needleXAcc"></div>
+            <div id="dispAcceleration">
+                <div id="faceXAcc">
+                    <div id="needleXAcc"></div>
                 </div>
-                <div id = "faceYAcc">
-                    <div id = "needleYAcc"></div>
+                <div id="faceYAcc">
+                    <div id="needleYAcc"></div>
                 </div>
-                <div id = "faceZAcc">
-                    <div id = "needleZAcc"></div>
+                <div id="faceZAcc">
+                    <div id="needleZAcc"></div>
                 </div>
             </div>
         </div>
-        <div id = "proximity">
+        <div id="proximity">
             <h2>Proximity</h2>
             <p>
                 Proximity: <span id="xProximity">---</span><br/>
             </p>
-            <div id = "dispXProximity">
-                <div id = "faceXProximity">
-                    <div id = "needleXProximity"></div>
+            <div id="dispXProximity">
+                <div id="faceXProximity">
+                    <div id="needleXProximity"></div>
                 </div>
             </div>
         </div>
-        <div id = "light">
+        <div id="light">
             <h2>Ambient Light Intensity</h2>
             <p>
                 Ambient light intensity: <span id="xLight">---</span><br/>
             </p>
-            <div id = "dispXLight">
-                <div id = "faceXLight">
-                    <div id = "needleXLight"></div>
+            <div id="dispXLight">
+                <div id="faceXLight">
+                    <div id="needleXLight"></div>
                 </div>
             </div>
+        </div>
+        <div id="battery">
+            <h2>Battery</h2>
+            <p>
+                Level: <span id="lBatt">---</span><br/>
+                Charging: <span id="cBatt">---</span><br/>
+                Charging time: <span id="ctBatt">---</span><br/>
+                Discharging time: <span id="dtBatt">---</span><br/>
+            </p>
         </div>
     </body>
 </html>

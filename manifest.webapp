@@ -19,6 +19,5 @@
       "description": "Access to geolocation is required to display coordinates"
     }
   },
-  "default_locale": "en",
-  "orientation": "portrait-primary"
+  "default_locale": "en"
 }
