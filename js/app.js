@@ -21,6 +21,7 @@ window.addEventListener("DOMContentLoaded", function() {
   var alphaEl = document.querySelector("#alpha");
   var betaEl = document.querySelector("#beta");
   var gammaEl = document.querySelector("#gamma");
+  var screenEl = document.querySelector("#screen");
   var needleAlphaEl = document.querySelector("#needleAlpha");
   var needleBetaEl = document.querySelector("#needleBeta");
   var needleGammaEl = document.querySelector("#needleGamma");
@@ -34,7 +35,14 @@ window.addEventListener("DOMContentLoaded", function() {
     needleAlphaEl.style.transform = "rotate(" + (-alpha) + "deg)";
     needleBetaEl.style.top = (48+50*(Math.sin(Math.PI*(-beta)/360))) + "%";
     needleGammaEl.style.left = (48+50*(Math.sin(Math.PI*(-gamma)/360))) + "%";
-  })
+  });
+  screenEl.innerHTML = screen.mozOrientation || screen.orientation;
+  screen.addEventListener("mozorientationchange", function () {
+    screenEl.innerHTML = screen.mozOrientation;
+  });
+  screen.addEventListener("orientationchange", function () {
+    screenEl.innerHTML = screen.orientation;
+  });
   
   // Acceleration
   var xAccEl = document.querySelector("#xAcc");
@@ -56,7 +64,7 @@ window.addEventListener("DOMContentLoaded", function() {
     needleYAccEl.style.right = Math.max(0, 50-25*(Math.max(0, yAcc)/9.81)) + "%";
     needleZAccEl.style.left = Math.max(0, 50+25*(Math.min(0, zAcc)/9.81)) + "%";
     needleZAccEl.style.right = Math.max(0, 50-25*(Math.max(0, zAcc)/9.81)) + "%";
-  })
+  });
   
   // Proximity
   var xProximityEl = document.querySelector("#xProximity");
@@ -67,7 +75,7 @@ window.addEventListener("DOMContentLoaded", function() {
     var maxXProximity = Math.max(event.max, event.value);
     xProximityEl.innerHTML = Math.round(xProximity) + "cm";
     needleXProximityEl.style.left = -2+100*(xProximity-minXProximity)/(maxXProximity-minXProximity) + "%";
-  })
+  });
   
   // Ambient light intensity
   var xLightEl = document.querySelector("#xLight");
@@ -76,6 +84,6 @@ window.addEventListener("DOMContentLoaded", function() {
     var xLight = event.value;
     xLightEl.innerHTML = Math.round(xLight) + "lux";
     needleXLightEl.style.width = 100*(1-Math.exp(-xLight/100)) + "%";
-  })
+  });
     
 });
